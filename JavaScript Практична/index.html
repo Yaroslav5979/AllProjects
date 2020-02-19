@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> </head>
+
+<body>
+    <div id="container">
+        <div id="box1">
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Lorem ipsum dolor sit amet</p>
+            <p>Lorem ipsum dolor sit amet</p>
+        </div>
+        <div>
+            <input id="editBtn" name="z" type="button" value="Редагувати" />
+            <input id="styleBtn" name="x" type="button" value="Стилізувати" /> </div>
+        <div id="box2">
+            <div id="editText">
+                <textarea id="text" name="tt" type="text" cols="80" rows="15"></textarea>
+                <input id="saveBtn" name="save" type="button" value="Зберегти" />
+                <input id="addBtn" name="add" type="button" value="Додати" /> </div>
+            <div id="styleText">
+                <div id="radioStyle">
+                    <p>Розмір тексту:</p>
+                    <input id="radioIq" name="textSize" type="radio">
+                    <p>12pt</p>
+                    <input id="radioIw" name="textSize" type="radio">
+                    <p>14pt</p>
+                    <input id="radioIe" name="textSize" type="radio" checked>
+                    <p>16pt</p>
+                    <input id="radioIr" name="textSize" type="radio">
+                    <p>18pt</p>
+                    <input id="radioIt" name="textSize" type="radio">
+                    <p>20pt</p>
+                </div>
+                <p>Лігатура:</p>
+                <form name="f1" id="changeText">
+                    <select name="changeText">
+                        <option id="newRoman" name='textChange' value="fantasy">Fantasy</option>
+                        <option name="textChange" value="monospace">Monospace</option>
+                        <option name="textChange" value="serif">Serif</option>
+                        <option name="textChange" value="cursive">Cursive</option>
+                    </select>
+                </form>
+                <div id="styleColor">
+                    <input id="colorText" type="button" value="Колір тексту">
+                    <input id="colorFon" type="button" value='Колір фону'> </div>
+                <div id="textColor">
+                    <div id="color1"></div>
+                    <div id="color2"></div>
+                    <div id="color3"></div>
+                    <div id="color4"></div>
+                    <div id="color5"></div>
+                    <div id="color6"></div>
+                    <div id="color7"></div>
+                    <div id="color8"></div>
+                    <div id="color9"></div>
+                </div>
+                <div id="fonColor">
+                    <div id="col1"></div>
+                    <div id="col2"></div>
+                    <div id="col3"></div>
+                    <div id="col4"></div>
+                    <div id="col5"></div>
+                    <div id="col6"></div>
+                    <div id="col7"></div>
+                    <div id="col8"></div>
+                    <div id="col9"></div>
+                </div>
+                <div id="changeCheckbox">
+                    <p>
+                        <input id="textRude" type="checkbox" name="rude">Жирний текст</p>
+                    <p>
+                        <input id="textCursive" type="checkbox" name="cursive">Курсивний текст</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container2">
+        <h1>Виберіть, що саме ви хочете додати:</h1>
+        <div id="choiceRadio">
+            <p>
+                <input id="userTable" type="radio" name="table" value="Таблицю" checked>Таблицю</p>
+            <p>
+                <input id="userList" type="radio" name="table">Список</p>
+        </div>
+        <div id="box4">
+            <!--            <form name="f2" id="changeTable">-->
+            <p> Введіть кількість рядків таблиці:
+                <input id="numberStrings" type="text" size="1px"> </p>
+            <p>Введіть кількість стовпців таблиці:
+                <input id="numberColumns" type="text" size="1px"> </p>
+            <h3>Стилізуйте таблицю:</h3>
+            <p>Введіть ширину комірки таблиці:
+                <input id="cellWidth" type="text" size="1px"> </p>
+            <p>Введіть висоту комірки таблиці:
+                <input id="cellHeight" type="text" size="1px"> </p>
+            <!--                   </form>-->
+            <div id="box3">
+                <p>Товщина:
+                    <input id="widthLines" type="text" size="1px"> </p>
+                <form name="f3">
+                    <p>Тип лінії:
+                        <select name="" id="typeLines">
+                            <option id="userLine" value="solid">Solid</option>
+                            <option id="userLine" value="dotted">Dotted</option>
+                            <option id="userLine" value="dashed">Dashed</option>
+                            <option id="userLine" value="double">Double</option>
+                        </select>
+                    </p>
+                    <p>Колір лінії:
+                        <select name="" id="colorLines">
+                            <option value="black">Black</option>
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                        </select>
+                    </p>
+                </form>
+            </div>
+            <input id="create" type="button" value="Створити"> </div>
+        <div id="box5">
+            <p>Введіть кількість елементів списку:
+                <input id="nomberItems" type="text" size="1px"> </p>
+            <form name="f2" id="markerdList">
+                <p>Тип маркування списку:
+                    <select id="changeList">
+                        <option value="disc">Disc</option>
+                        <option value="circle">Circle</option>
+                        <option value="square">Square</option>
+                    </select>
+                </p>
+            </form>
+            <input id="createList" type="button" value='Створити список'> </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

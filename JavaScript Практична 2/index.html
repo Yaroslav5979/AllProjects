@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Song+Myung" rel="stylesheet"> </head>
+
+<body>
+    <div id="container">
+        <div id="bgMenu">
+            <div id="menu2">
+                <input id="save" type="button" value="Save">
+                <input id="crTable" type="button" value="Create Table">
+                <input id="crList" type="button" value="Create List"> </div>
+            <div id="menu">
+                <input id="edit" type="button" value='Edit'>
+                <input id="rude" type="button" value='B'>
+                <input id="inclined" type="button" value='/'>
+                <input id="underlined" type="button" value='U'>
+                <select id="wrapText" onchange="wrapText(this);">
+                    <option value="7px">7pt</option>
+                    <option value="8px">8pt</option>
+                    <option value="9px">9pt</option>
+                    <option value="10px">10pt</option>
+                    <option value="11px">11pt</option>
+                    <option value="12px">12pt</option>
+                    <option value="14px">14pt</option>
+                    <option value="16px">16pt</option>
+                    <option value="18px">18pt</option>
+                    <option value="20px">20pt</option>
+                    <option value="30px">30pt</option>
+                    <option value="40px">40pt</option>
+                </select>
+                <select name="" id="styleText" onchange="styleText(this);">
+                    <option value="Georgia">Georgia</option>
+                    <option value="Palatino Linotype">Palatino Linotype</option>
+                    <option value="Book Antiqua">Book Antiqua</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Lucida Console">Lucida Console</option>
+                </select>
+                <input id="textColor" type="button" value='Color'>
+                <input id="bgImg" type="button" value='Background'>
+                <div id="sidesText">
+                    <p>
+                        <input id="textLeft" type="radio" name="radioText" size="1px" value="left" checked>Left</p>
+                    <p>
+                        <input id="textCenter" type="radio" name="radioText" size="1px" value="center">Center</p>
+                    <p>
+                        <input id="textRight" type="radio" name="radioText" size="1px" value="right">Right</p>
+                </div>
+            </div>
+            <div id="colorText">
+                <div style="background: #C2FE7D; color: #C2FE7D" value="#C2FE7D" id="color1" class="color_text"></div>
+                <div value="#FE14EE" id="color2" class="color_text"></div>
+                <div value="#64F4FE" id="color3" class="color_text"></div>
+                <div value="#EFF3FE" id="color4" class="color_text"></div>
+                <div value="black" id="color5" class="color_text"></div>
+                <div value="red" id="color6" class="color_text"></div>
+                <div value="#0E6EAF" id="color7" class="color_text"></div>
+                <div value="#E6FF28" id="color8" class="color_text"></div>
+                <div value="#3403AF" id="color9" class="color_text"></div>
+            </div>
+            <div id="boxImg">
+                <input type="button" id="changeColor" value="Background Color">
+                <input type="button" id="changeImages" value="Background Pictures">
+                <div id="colorBg">
+                    <div value="#C2FE7D" id="bgcolor1" class="color_bg"></div>
+                    <div value="#FE14EE" id="bgcolor2" class="color_bg"></div>
+                    <div value="#64F4FE" id="bgcolor3" class="color_bg"></div>
+                    <div value="#EFF3FE" id="bgcolor4" class="color_bg"></div>
+                    <div value="#28FE73" id="bgcolor5" class="color_bg"></div>
+                    <div value="red" id="bgcolor6" class="color_bg"></div>
+                    <div value="#0E6EAF" id="bgcolor7" class="color_bg"></div>
+                    <div value="#E6FF28" id="bgcolor8" class="color_bg"></div>
+                    <div value="#3403AF" id="bgcolor9" class="color_bg"></div>
+                </div>
+                <div id="pictureBg"> <img id="picture" class="picturesBg" src="img/1.jpg" onclick="changeBg(this)"> <img id="picture2" class="picturesBg" src="img/2.jpg" onclick="changeBg(this)"> <img id="picture3" class="picturesBg" src="img/3.jpg" onclick="changeBg(this)"> <img id="picture4" class="picturesBg" src="img/4.jpg!d" onclick="changeBg(this)"> <img id="picture5" class="picturesBg" src="img/5.jpg!d" onclick="changeBg(this)"> <img id="picture6" class="picturesBg" src="img/6.jpg!d" onclick="changeBg(this)"> <img id="picture7" class="picturesBg" src="img/7.jpg!d" onclick="changeBg(this)"> <img id="picture8" class="picturesBg" src="img/8.jpg!d" onclick="changeBg(this)"> <img id="picture9" class="picturesBg" src="img/9.jpg!d" onclick="changeBg(this)">
+                    <input type="file" class="input_image" id="imageLoader">
+                    <button type="button" id="apply">Apply</button>
+                </div>
+            </div>
+        </div>
+        <div id="text">
+            <div id="textR">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At architecto id assumenda molestias vitae tempora, asperiores possimus voluptatibus nam dicta, placeat eos ea iure eligendi suscipit voluptatem ut blanditiis ipsum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At architecto id assumenda molestias vitae tempora, asperiores possimus voluptatibus nam dicta, placeat eos ea iure eligendi suscipit voluptatem ut blanditiis ipsum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At architecto id assumenda molestias vitae tempora, asperiores possimus voluptatibus nam dicta, placeat eos ea iure eligendi suscipit voluptatem ut blanditiis ipsum.Lorem ipsum dolor sit amet, consectetur adipisicing elit. At architecto id assumenda molestias vitae tempora, asperiores possimus voluptatibus nam dicta, placeat eos ea iure eligendi suscipit voluptatem ut blanditiis ipsum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At architecto id assumenda molestias vitae tempora, asperiores possimus voluptatibus nam dicta, placeat eos ea iure eligendi suscipit voluptatem ut blanditiis ipsum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At architecto id assumenda molestias vitae tempora, asperiores possimus voluptatibus nam dicta, placeat eos ea iure eligendi suscipit voluptatem ut blanditiis ipsum.</p>
+            </div>
+        </div>
+        <textarea id="texteditor" name="tt" type="text" cols="200" rows="50"> </textarea>
+        <div id="tableStile">
+           <!--
+        ////////////////////////////////////
+        ////////////////// GREATE Table
+-->
+            <div id="list1">
+                <p> К-сть рядків:
+                    <input id="numberStrings" type="text" size="1px"> </p>
+                <p>Ширина:
+                    <input id="cellWidth" type="text" size="1px"> </p>
+                <p>Cellspacing:
+                    <input id="Cellsp" type="text" size="1px"> </p>
+                <p>Товщина рамки:
+                    <input id="thicknBorder" type="text" size="1px"> </p>
+            </div>
+            <div id="list2">
+                <p> К-сть стовпців:
+                    <input id="numberColumns" type="text" size="1px"> </p>
+                <p>Висота:
+                    <input id="cellHeight" type="text" size="1px"> </p>
+                <p>Колір рамки:
+                    <input id="border_Color" type="text" size="1px"> </p>
+            </div>
+        </div>
+           <div id="list3">
+            <input id="reset1" type="button" value="Скинути">
+            <input id="create" type="button" value="Створити"> </div>
+<!--
+        ////////////////////////////////////
+        ////////////////// GREATE LIST
+-->
+     
+        <div id="list4">
+            <p>Тип списку:
+                <input type="radio" value="ol" id="ol_list" checked>ol </p>
+            <p>Тип маркера:
+                <select id="typeMark">
+                    <option value="Default">Default</option>
+                    <option value="A">A</option>
+                    <option value="a">a</option>
+                    <option value="I">I</option>
+                    <option value="i">i</option>
+                </select>
+            </p>
+            <p>К-сть айтемів:
+            <input id="items" type="text"></p>
+             <input id="reset2" class="button_list" type="button" value="Скинути">
+            <input id="create2" class="button_list" type="button" value="Створити">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
