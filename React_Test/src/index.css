@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+}
+.app-wrapper {
+  width: 1200px;
+  margin: auto;
+}
+
+.app-wrapper-content {
+  display: flex;
+  background-color: dodgerblue;
+}

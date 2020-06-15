@@ -1,0 +1,33 @@
+.dialogs {
+  display: flex;
+}
+.dialogsItems {
+  padding: 15px;
+}
+/* .dialog {
+} */
+.dialogsItems .active {
+  color: yellow;
+}
+.dialogsItems .textDialogs {
+  margin-top: 10px;
+  color: antiquewhite;
+}
+.dialog a {
+  font-size: 18px;
+  text-decoration: none;
+  color: springgreen;
+}
+.avatar {
+  width: 150px;
+}
+.box {
+  display: block;
+}
+.messages {
+  padding: 15px;
+  margin-left: 50px;
+  color: black;
+}
+/* .message {
+} */

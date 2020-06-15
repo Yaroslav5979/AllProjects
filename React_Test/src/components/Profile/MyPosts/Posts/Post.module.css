@@ -1,0 +1,19 @@
+.headImg {
+  width: 100%;
+}
+.item {
+  color: yellowgreen;
+}
+.item h3 {
+  color: navy;
+}
+.avatar {
+  width: 50px;
+}
+.like {
+  width: 30px;
+  cursor: pointer;
+}
+.box {
+  padding: 10px;
+}
