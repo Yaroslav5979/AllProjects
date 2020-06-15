@@ -24,7 +24,7 @@ const store = {
           avaImg: "https://pbs.twimg.com/media/EK1PvdOU8AARgn5.jpg",
         },
       ],
-      newPostText: "",
+      newPostText: "Hello) uuu)",
     },
     messagePage: {
       dialogs: [

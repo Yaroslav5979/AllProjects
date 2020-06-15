@@ -3,7 +3,7 @@ import React from "react";
 import Post from "./MyPosts/Posts/Post";
 import c from "./MyPosts/Posts/Post.module.css";
 
-import MyPosts from "./ProfileInfo/MyPosts";
+import MyPostsContainer from "./ProfileInfo/MyPostsContainer";
 
 const Profile = (props) => {
   let messageItems = props.posts.map((mes) => {
@@ -19,7 +19,7 @@ const Profile = (props) => {
 
   return (
     <div className={c.content}>
-      <MyPosts dispatch={props.dispatch} newPostText={props.newPostText} />
+      <MyPostsContainer store={props.store} />
       <div className={c.box}>{messageItems}</div>
     </div>
   );

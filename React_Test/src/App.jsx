@@ -10,6 +10,7 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import News from "./components/News/News";
 
 const App = (props) => {
+  console.log(props);
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -21,9 +22,8 @@ const App = (props) => {
             path="/profile"
             render={() => (
               <Profile
-                dispatch={props.dispatch}
+                store={props.store}
                 posts={props.appState.profilePost.posts}
-                newPostText={props.appState.profilePost.newPostText}
               />
             )}
           />

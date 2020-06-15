@@ -9,7 +9,11 @@ import store from "./redux/redux-store.js";
 const renderTree = (getState) => {
   ReactDOM.render(
     <React.StrictMode>
-      <App appState={getState} dispatch={store.dispatch.bind(store)} />
+      <App
+        appState={getState}
+        store={store}
+        dispatch={store.dispatch.bind(store)}
+      />
     </React.StrictMode>,
     document.getElementById("root")
   );
@@ -17,7 +21,7 @@ const renderTree = (getState) => {
 ///store.getState(){return this._state}
 renderTree(store.getState());
 
-//Коли store змінеться 
+//Коли store змінеться
 store.subscribe(() => {
   let state = store.getState();
   renderTree(state);

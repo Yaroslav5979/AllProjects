@@ -1,21 +1,26 @@
 import React from "react";
-import c from "./MyPosts.module.css";
-import MyPosts from "./MyPosts";
 
-const MyPosts = (props) => {
-  let textPost = React.createRef();
+import MyPosts from "./MyPosts.jsx";
+
+const MyPostsContainer = (props) => {
+  let state = props.store.getState();
 
   let addPost = () => {
-    props.addPost();
-    //props.dispatch({ type: "ADD-POST" });
+    props.store.dispatch({ type: "ADD-POST" });
   };
 
   let onPostChange = (text) => {
-    props.updateNewPostText(text);
-    props.dispatch({ type: "UPDATE-NEW-POST-TEXT", text: text });
+    props.store.dispatch({ type: "UPDATE-NEW-POST-TEXT", text: text });
   };
 
-  return <MyPosts updateNewPostText={(onPostChange) => {}} />;
+  return (
+    <MyPosts
+      updateNewPostText={onPostChange}
+      addPost={addPost}
+      posts={state.profilePost.posts}
+      newPostText={state.profilePost.newPostText}
+    />
+  );
 };
 
-export default MyPosts;
+export default MyPostsContainer;

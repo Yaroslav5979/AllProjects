@@ -4,14 +4,14 @@ import c from "./MyPosts.module.css";
 const MyPosts = (props) => {
   let textPost = React.createRef();
 
-  let addPost = () => {
-    props.dispatch({ type: "ADD-POST" });
+  let onAddPost = () => {
+    props.addPost();
   };
 
   let onPostChange = () => {
     let text = textPost.current.value;
 
-    props.dispatch({ type: "UPDATE-NEW-POST-TEXT", text: text });
+    props.updateNewPostText(text);
   };
 
   return (
@@ -27,7 +27,7 @@ const MyPosts = (props) => {
         value={props.newPostText}
         ref={textPost}
       />
-      <button onClick={addPost}>Add post</button>
+      <button onClick={onAddPost}>Add post</button>
       <div>Avatar + Discription</div>
     </div>
   );
