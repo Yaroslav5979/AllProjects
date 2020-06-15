@@ -24,7 +24,7 @@ const store = {
           avaImg: "https://pbs.twimg.com/media/EK1PvdOU8AARgn5.jpg",
         },
       ],
-      newPostText: "I go to Korea",
+      newPostText: "",
     },
     messagePage: {
       dialogs: [
