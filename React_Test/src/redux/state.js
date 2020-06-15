@@ -6,25 +6,22 @@ const store = {
     profilePost: {
       posts: [
         {
-          name: "Naruto",
+          name: "Bae Suzy",
           message: "Hi guys",
           likeCount: 15,
-          avaImg:
-            "https://i.pinimg.com/originals/35/43/7c/35437c2b0d5713fa1ccd23bb8ac68dc5.jpg",
+          avaImg: "https://pbs.twimg.com/media/EK1PvdOU8AARgn5.jpg",
         },
         {
-          name: "Sakura",
+          name: "Bae Suzy",
           message: "Hello)",
           likeCount: 20,
-          avaImg:
-            "https://i.pinimg.com/736x/67/23/d1/6723d198ae6cc8d847c700fe344b1d1d.jpg",
+          avaImg: "https://pbs.twimg.com/media/EK1PvdOU8AARgn5.jpg",
         },
         {
-          name: "Saske",
+          name: "Bae Suzy",
           message: "Yo ....",
           likeCount: 8,
-          avaImg:
-            "https://pm1.narvii.com/6489/aa426a50d20fcd874e3ba8110e415cca53976a0f_00.jpg",
+          avaImg: "https://pbs.twimg.com/media/EK1PvdOU8AARgn5.jpg",
         },
       ],
       newPostText: "I go to Korea",
