@@ -1,7 +1,7 @@
 let initialState = {
   dialogs: [
     {
-      name: "Bae Suzy",
+      name: "Suzy",
       avaImg: "https://pbs.twimg.com/media/EK1PvdOU8AARgn5.jpg",
     },
     {
@@ -25,13 +25,18 @@ let initialState = {
 };
 
 export const messageReducer = (state = initialState, action) => {
+  let copySate = { ...state };
+
   ///Повідомлення
   if (action.type === "SEND-MESSAGE") {
     let newMessage = { id: 4, message: state.newMessage };
-    state.message.push(newMessage);
-    state.newMessage = "";
+    copySate.message.push(newMessage);
+    copySate.newMessage = "";
+    return copySate;
   } else if (action.type === "UPDATE-NEW-MESSAGE") {
-    state.newMessage = action.text;
+    copySate.newMessage = action.newMessage;
+
+    return copySate;
   }
 
   return state;

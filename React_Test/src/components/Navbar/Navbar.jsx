@@ -4,9 +4,9 @@ import { NavLink } from "react-router-dom";
 import Friends from "../Friends/Friends";
 
 const Navbar = (props) => {
-  let avaImg = props.avaImg.map((img) => {
-    return <Friends img={img.avaImg} />;
-  });
+  // let avaImg = props.avaImg.map((img) => {
+  //   return <Friends img={img.avaImg} />;
+  // });
   return (
     <nav className={c.nav}>
       <ul>
@@ -28,7 +28,7 @@ const Navbar = (props) => {
 
         <li className={c.item}></li>
         <h3>Friends</h3>
-        {avaImg}
+        {/* {avaImg} */}
       </ul>
     </nav>
   );

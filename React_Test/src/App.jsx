@@ -6,37 +6,19 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
-import Dialogs from "./components/Dialogs/Dialogs";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import News from "./components/News/News";
 
 const App = (props) => {
-  console.log(props);
   return (
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
         <div className="app-wrapper-content">
-          <Navbar avaImg={props.appState.messagePage.dialogs} />
+          <Navbar />
 
-          <Route
-            path="/profile"
-            render={() => (
-              <Profile
-                store={props.store}
-                posts={props.appState.profilePost.posts}
-              />
-            )}
-          />
-          <Route
-            path="/dialogs"
-            render={() => (
-              <Dialogs
-                dialogsName={props.appState.messagePage.dialogs}
-                message={props.appState.messagePage}
-                dispatch={props.dispatch}
-              />
-            )}
-          />
+          <Route path="/profile" render={() => <Profile />} />
+          <Route path="/dialogs" render={() => <DialogsContainer />} />
           <Route path="/news" component={News} />
         </div>
       </div>

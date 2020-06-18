@@ -1,17 +1,28 @@
 import React from "react";
 import c from "./MyPosts.module.css";
 
+import Post from "../MyPosts/Posts/Post";
+
 const MyPosts = (props) => {
+  let messageItems = props.posts.map((mes) => {
+    return (
+      <Post
+        name={mes.name}
+        messageData={mes.message}
+        likeCount={mes.likeCount}
+        avaImg={mes.avaImg}
+      />
+    );
+  });
   let textPost = React.createRef();
 
   let onAddPost = () => {
     props.addPost();
   };
-
   let onPostChange = () => {
     let text = textPost.current.value;
 
-    props.updateNewPostText(text);
+    props.postChange(text);
   };
 
   return (
@@ -29,6 +40,8 @@ const MyPosts = (props) => {
       />
       <button onClick={onAddPost}>Add post</button>
       <div>Avatar + Discription</div>
+
+      <div className={c.box}>{messageItems}</div>
     </div>
   );
 };

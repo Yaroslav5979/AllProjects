@@ -26,6 +26,11 @@ let initialState = {
 };
 
 const profileReducer = (state = initialState, action) => {
+  //Make a copy if the Object
+  let stateCopy = { ...state };
+  //Make a copy if the Arr in Obj
+  stateCopy.posts = [...state.posts];
+
   if (action.type === ADD_POST) {
     let newPost = {
       name: "Sem",
@@ -35,10 +40,15 @@ const profileReducer = (state = initialState, action) => {
         "https://static.tvtropes.org/pmwiki/pub/images/samwinchester_581.jpg",
     };
 
-    state.posts.push(newPost);
-    state.newPostText = "";
+    stateCopy.posts.push(newPost);
+
+    stateCopy.newPostText = "";
+
+    return stateCopy;
   } else if (action.type === UPDATE_NEW_POST_TEXT) {
-    state.newPostText = action.text;
+    stateCopy.newPostText = action.text;
+
+    return stateCopy;
   }
 
   return state;

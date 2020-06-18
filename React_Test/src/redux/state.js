@@ -67,7 +67,6 @@ const store = {
 
   //action приймає в себе обєкти type і text
   dispatch(action) {
-    console.log(this);
     this._state.profilePost = profileReducer(this._state.profilePost, action);
     this._state.messagePage = messageReducer(this._state.messagePage, action);
     this.renderTree(this._state);

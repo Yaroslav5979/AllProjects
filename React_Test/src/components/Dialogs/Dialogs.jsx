@@ -6,21 +6,23 @@ import DialogItem from "./DialogItem/DialogsItem.jsx";
 import Message from "./Message/Message.jsx";
 
 const Dialogs = (props) => {
-  let dialogsElements = props.dialogsName.map((di) => {
+  ////////////////////////////////////////////////
+  let dialogsElements = props.dialogs.map((di) => {
     return <DialogItem name={di.name} avaImg={di.avaImg} />;
   });
-  let messagesElements = props.message.message.map((mes) => {
+  let messagesElements = props.message.map((mes) => {
     return <Message message={mes.message} />;
   });
 
   //////////////Input//////////////////////////
 
-  let addText = () => {
-    props.dispatch({ type: "SEND-MESSAGE" });
+  let newAddText = () => {
+    props.addText();
   };
-  let update = (event) => {
+  let newUpdate = (event) => {
     let text = event.target.value;
-    props.dispatch({ type: "UPDATE-NEW-MESSAGE", text: text });
+
+    props.update(text);
   };
 
   /////////////////////////////////////////////
@@ -31,12 +33,8 @@ const Dialogs = (props) => {
       <div className={s.messages}>
         {messagesElements}
         <div>
-          <input
-            type="text"
-            onChange={update}
-            value={props.message.newMessage}
-          />
-          <button onClick={addText}>Add text</button>
+          <input type="text" onChange={newUpdate} value={props.newMessage} />
+          <button onClick={newAddText}>Add text</button>
         </div>
       </div>
     </div>
