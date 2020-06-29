@@ -3,7 +3,7 @@ import c from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
 import Friends from "../Friends/Friends";
 
-const Navbar = (props) => {
+const Navbar = () => {
   // let avaImg = props.avaImg.map((img) => {
   //   return <Friends img={img.avaImg} />;
   // });
@@ -18,6 +18,11 @@ const Navbar = (props) => {
         <li className={c.item}>
           <NavLink to="/dialogs" activeClassName={c.activeLink}>
             Dialogs
+          </NavLink>
+        </li>
+        <li className={c.item}>
+          <NavLink to="/users" activeClassName={c.activeLink}>
+            Users
           </NavLink>
         </li>
         <li className={c.item}>

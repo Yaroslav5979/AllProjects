@@ -7,6 +7,7 @@ const MyPosts = (props) => {
   let messageItems = props.posts.map((mes) => {
     return (
       <Post
+        key={mes.id}
         name={mes.name}
         messageData={mes.message}
         likeCount={mes.likeCount}
@@ -27,11 +28,6 @@ const MyPosts = (props) => {
 
   return (
     <div>
-      <img
-        className={c.headImg}
-        src="https://i.artfile.ru/2560x1440_1049251_[www.ArtFile.ru].jpg"
-      />
-
       <input
         type="text"
         onChange={onPostChange}
@@ -39,7 +35,6 @@ const MyPosts = (props) => {
         ref={textPost}
       />
       <button onClick={onAddPost}>Add post</button>
-      <div>Avatar + Discription</div>
 
       <div className={c.box}>{messageItems}</div>
     </div>

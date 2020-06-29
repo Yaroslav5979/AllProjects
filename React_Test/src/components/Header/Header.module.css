@@ -1,3 +1,9 @@
 .header {
   display: block;
 }
+.loginBlock {
+  float: right;
+}
+.loginBlock a {
+  color: black;
+}

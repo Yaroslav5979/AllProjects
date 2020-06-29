@@ -8,10 +8,10 @@ import Message from "./Message/Message.jsx";
 const Dialogs = (props) => {
   ////////////////////////////////////////////////
   let dialogsElements = props.dialogs.map((di) => {
-    return <DialogItem name={di.name} avaImg={di.avaImg} />;
+    return <DialogItem key={di.id} name={di.name} avaImg={di.avaImg} />;
   });
   let messagesElements = props.message.map((mes) => {
-    return <Message message={mes.message} />;
+    return <Message key={mes.id} message={mes.message} />;
   });
 
   //////////////Input//////////////////////////

@@ -6,18 +6,21 @@ const store = {
     profilePost: {
       posts: [
         {
+          id: 1,
           name: "Bae Suzy",
           message: "Hi guys",
           likeCount: 15,
           avaImg: "https://pbs.twimg.com/media/EK1PvdOU8AARgn5.jpg",
         },
         {
+          id: 2,
           name: "Bae Suzy",
           message: "Hello)",
           likeCount: 20,
           avaImg: "https://pbs.twimg.com/media/EK1PvdOU8AARgn5.jpg",
         },
         {
+          id: 3,
           name: "Bae Suzy",
           message: "Yo ....",
           likeCount: 8,
@@ -29,15 +32,18 @@ const store = {
     messagePage: {
       dialogs: [
         {
+          id: 1,
           name: "Bae Suzy",
           avaImg: "https://pbs.twimg.com/media/EK1PvdOU8AARgn5.jpg",
         },
         {
+          id: 2,
           name: "Sem",
           avaImg:
             "https://static.tvtropes.org/pmwiki/pub/images/samwinchester_581.jpg",
         },
         {
+          id: 3,
           name: "Emma",
           avaImg:
             "https://hips.hearstapps.com/cosmouk.cdnds.net/cm/14/30/53d499198eb07_-_emma-watson-cannes-2013-kardashian-3fppja-lgn.jpg",

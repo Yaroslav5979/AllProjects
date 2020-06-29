@@ -1,0 +1,11 @@
+.avatar {
+  width: 150px;
+}
+.container {
+  display: flex;
+}
+.selectedPage {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 5px;
+}
